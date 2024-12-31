@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess my birthday </title>
+    <link rel="stylesheet" href="../src/style.css">
+
+</head>
+<body>
+    <div class="absolute">
+        <pre>
+⣠⣤⣤⡤⠤⢤⣤⣀⡀⠀⠐⠒⡄⠀⡠⠒⠀⠀⢀⣀⣤⠤⠤⣤⣤⣤⡄
+⠈⠻⣿⡤⠤⡏⠀⠉⠙⠲⣄⠀⢰⢠⠃⢀⡤⠞⠋⠉⠈⢹⠤⢼⣿⠏⠀
+⠀⠀⠘⣿⡅⠓⢒⡤⠤⠀⡈⠱⣄⣼⡴⠋⡀⠀⠤⢤⡒⠓⢬⣿⠃⠀⠀
+⠀⠀⠀⠹⣿⣯⣐⢷⣀⣀⢤⡥⢾⣿⠷⢥⠤⣀⣀⣞⣢⣽⡿⠃⠀⠀⠀
+⠀⠀⠀⠀⠈⢙⣿⠝⠀⢁⠔⡨⡺⡿⡕⢔⠀⡈⠐⠹⣟⠋⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢼⣟⢦⢶⢅⠜⢰⠃⠀⢹⡌⢢⣸⠦⠴⣿⡇⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠘⣿⣇⡬⡌⢀⡟⠀⠀⠀⢷⠀⣧⢧⣵⣿⠂⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠈⢻⠛⠋⠉⠀⠀⠀⠀⠈⠉⠙⢻⡏⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢰⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠄⠀⠀⠀⠀⠀⠀
+        </pre>
+    </div>
+    <div class="noise"></div>
+    <div class="overlay"></div>
+    <div class="container">
+        
+        <div class="glitch">Guess my birthday ?</div>
+        <div class="form">
+            <div class="inputs">
+                <label for="day">Day</label>
+                <input id="day" type="number" placeholder="Day" value="1">
+                <label for="month">Month</label>
+                <input id="month" type="number" placeholder="Month" value="1">
+                <label for="year">Year</label>
+                <input id="year" type="number" placeholder="Year" value="2006">
+            </div>
+            <div style="width: 98%;">
+                <input type="button" value="Submit" class="submit" style="width: 100%; margin: 10px 0;">
+            </div>
+        </div>
+    </div>
+    <div id="popup">
+        <div class="noise"></div>
+        <div class="overlay"></div>
+        <div class="container">
+            <h1>You don't know my birthday :(</h1>
+            <pre class="absolute" style="z-index: 0;">
+⡴⠒⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⠉⠳⡆⠀
+⣇⠰⠉⢙⡄⠀⠀⣴⠖⢦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣆⠁⠙⡆
+⠘⡇⢠⠞⠉⠙⣾⠃⢀⡼⠀⠀⠀⠀⠀⠀⠀⢀⣼⡀⠄⢷⣄⣀⠀⠀⠀⠀⠀⠀⠀⠰⠒⠲⡄⠀⣏⣆⣀⡍
+⠀⢠⡏⠀⡤⠒⠃⠀⡜⠀⠀⠀⠀⠀⢀⣴⠾⠛⡁⠀⠀⢀⣈⡉⠙⠳⣤⡀⠀⠀⠀⠘⣆⠀⣇⡼⢋⠀⠀⢱
+⠀⠘⣇⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⡴⢋⡣⠊⡩⠋⠀⠀⠀⠣⡉⠲⣄⠀⠙⢆⠀⠀⠀⣸⠀⢉⠀⢀⠿⠀⢸
+⠀⠀⠸⡄⠀⠈⢳⣄⡇⠀⠀⢀⡞⠀⠈⠀⢀⣴⣾⣿⣿⣿⣿⣦⡀⠀⠀⠀⠈⢧⠀⠀⢳⣰⠁⠀⠀⠀⣠⠃
+⠀⠀⠀⠘⢄⣀⣸⠃⠀⠀⠀⡸⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠈⣇⠀⠀⠙⢄⣀⠤⠚⠁⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀⠀⠀⢹⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⢘⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⢰⣿⣿⣿⡿⠛⠁⠀⠉⠛⢿⣿⣿⣿⣧⠀⠀⣼⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡀⣸⣿⣿⠟⠀⠀⠀⠀⠀⠀⠀⢻⣿⣿⣿⡀⢀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡇⠹⠿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⡿⠁⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣤⣞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢢⣀⣠⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠲⢤⣀⣀⠀⢀⣀⣀⠤⠒⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            </pre>
+            <button onclick="document.getElementById('popup').style.display='none'" style="margin-bottom: 10px;">Try again</button>
+            <button onclick="document.getElementById('hint').style.display='block'">Get a Hint</button>
+            <p id="hint" style="display: none;">
+                Hint (Morse Code) : <br>
+                Day : -....<br>
+                Month : .- .--. .-. .. .-..<br>
+                Year : ..--- ----- ----- -....
+            </p>
+       </div>
+        
+    </div>
+    <div id="popup-success">
+        <div class="noise"></div>
+        <div class="overlay"></div>
+        <div class="container">
+            <p>Congratulations!</p>
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWh1ajh3N3I3eThzaW82bnU3bGttcWR6OWpqM2pua2xmZGFuOTF5OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/R6gvnAxj2ISzJdbA63/giphy.webp" alt="">
+            <p class="wait">Wait a minute, I have a gift for you... <span class="downcount">5</span></p>
+        </div>
+    </div>
+    <div class="loading">
+        <div class="noise"></div>
+        <div class="overlay"></div>
+        <div class="container" style="text-align: start;">
+            <h1>Loading...</h1>
+            <p class="terminal"></p>
+            <p class="terminal"></p>
+            <p class="terminal"></p>
+            <p class="terminal"></p>
+
+        </div>
+    </div>
+</body>
+
+<script>
+    const StartAudio = new Audio('../src/start2.mp3');
+    const LoseAudio = new Audio('../src/lose.mp3');
+    const WinAudio = new Audio('../src/win.mp3');
+    document.querySelector('.submit').addEventListener('click', function() {
+        const day = document.querySelector('input[placeholder="Day"]').value;
+        const month = document.querySelector('input[placeholder="Month"]').value;
+        const year = document.querySelector('input[placeholder="Year"]').value;
+        const popup = document.getElementById('popup');
+        const popupSuccess = document.getElementById('popup-success');
+        const message = document.getElementById('popup-message');
+
+        if (day != 6 || month != 4 || year != 2006) {
+            popup.style.display = 'flex';
+            LoseAudio.play();
+        } else {
+            popupSuccess.style.display = 'flex';
+            WinAudio.play();
+            startDownCount()
+        }
+    });
+    // wait a minute text animation 
+    const text = document.querySelector('.wait');
+    let count = 0;
+    setInterval(() => {
+        count++;
+        if (count % 2 == 0) {
+            text.style.color = 'rgba(171, 255, 130, 0.845)';
+        } else {
+            text.style.color = 'rgba(255, 255, 255, 0.8)';
+        }
+    }, 500);
+    // downcount function
+    function startDownCount() {
+        let downcount = 5;
+        const downcountElement = document.querySelector('.downcount');
+        const interval = setInterval(() => {
+            downcount--;
+            downcountElement.innerHTML = downcount;
+            if (downcount == 0) {
+                clearInterval(interval);
+                window.location.href = 'message.html';
+            }
+        }, 1000);
+    }
+    // loading animation with glitch effect
+    const loading = document.querySelector('.loading');
+    setTimeout(() => {
+        loading.style.opacity = 0;
+        setTimeout(() => {
+            loading.style.display = 'none';
+            
+        }, 1000);
+    }, 15000);
+    // terminal text typing animation
+    const terminal = document.querySelectorAll('.terminal');
+    let terminalText = [
+        '> Hello, YOU.',
+        '> I have a gift for you.',
+        '> But first you have to win a mini game...',
+        '> Are you ready ?....'
+    ];
+    let countText = 0;
+    let countChar = 0;
+    let interval = setInterval(() => {
+        if (countChar < terminalText[countText].length) {
+            terminal[countText].innerHTML += terminalText[countText].charAt(countChar);
+            countChar++;
+        } else {
+            countText++;
+            countChar = 0;
+            if (countText == terminalText.length) {
+                clearInterval(interval);
+            }
+        }
+    }, 100);
+    const body = document.querySelector('body');
+    body.addEventListener('mousemove', function(e) {
+        StartAudio.play();
+    });
+    
+
+</script>
+</html>
+
+
+

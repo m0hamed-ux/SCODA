@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SCODA</title>
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="../src/style.css">
 </head>
 <body>
     <div class="absolute">
@@ -23,20 +23,13 @@
     <div class="noise"></div>
     <div class="overlay"></div>
     <div class="container" style="background-color: rgba(0, 0, 0, 0.381);  padding: 10px; border-radius: 10px;">
-        <img src="https://media.tenor.com/RV6TxuF3axQAAAAM/hello-sir-squid-game-season-2.gif" alt="" style="width: 50%;">
-        <h1>Do you accept the challenge?</h1>
-        <div class="form">
-            <div style="width: 98%; display: flex; justify-content: space-between; z-index: 100; gap: 10px;">
-                <input type="button" value="Yes" class="yes submit" style="width: 100%; margin: 10px 0; z-index: 100; position: relative; cursor: pointer;">
-                <input type="button" value="No" class="no submit" style="width: 100%; margin: 10px 0; z-index: 100; position: relative; cursor: pointer;">
-            </div>
+        <p>Congratulations!</p>
+        <p>You have successfully completed the challenge.</p>
+
     </div>
 </body>
 <script>
-    const StartAudio = new Audio('src/start.mp3');
-    document.querySelector('.yes').addEventListener('click', () => {
-        window.location.href = 'pages/home.html';
-    });
+    const StartAudio = new Audio('../src/final.mp3');
     const body = document.querySelector('body');
     body.addEventListener('mousemove', function(e) {
         StartAudio.play();
