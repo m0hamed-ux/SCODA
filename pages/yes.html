@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCODA</title>
+    <link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+    <div class="absolute">
+        <pre>
+⣠⣤⣤⡤⠤⢤⣤⣀⡀⠀⠐⠒⡄⠀⡠⠒⠀⠀⢀⣀⣤⠤⠤⣤⣤⣤⡄
+⠈⠻⣿⡤⠤⡏⠀⠉⠙⠲⣄⠀⢰⢠⠃⢀⡤⠞⠋⠉⠈⢹⠤⢼⣿⠏⠀
+⠀⠀⠘⣿⡅⠓⢒⡤⠤⠀⡈⠱⣄⣼⡴⠋⡀⠀⠤⢤⡒⠓⢬⣿⠃⠀⠀
+⠀⠀⠀⠹⣿⣯⣐⢷⣀⣀⢤⡥⢾⣿⠷⢥⠤⣀⣀⣞⣢⣽⡿⠃⠀⠀⠀
+⠀⠀⠀⠀⠈⢙⣿⠝⠀⢁⠔⡨⡺⡿⡕⢔⠀⡈⠐⠹⣟⠋⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢼⣟⢦⢶⢅⠜⢰⠃⠀⢹⡌⢢⣸⠦⠴⣿⡇⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠘⣿⣇⡬⡌⢀⡟⠀⠀⠀⢷⠀⣧⢧⣵⣿⠂⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠈⢻⠛⠋⠉⠀⠀⠀⠀⠈⠉⠙⢻⡏⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢰⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠄⠀⠀⠀⠀⠀⠀
+        </pre>
+    </div>
+    <div class="noise"></div>
+    <div class="overlay"></div>
+    <div class="container" style="background-color: rgba(0, 0, 0, 0.381);  padding: 10px; border-radius: 10px">
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNm82Y283NXltbGMxaW9neGUzdDYxY2QwcjQxbzZhYTY1bTkzN2EyOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PSkcuZ35RSLl9Cltot/200w.webp" alt="" style="width: 50%;">
+        <p>Hello babe, You are my wife now. So when is our wedding?</p>
+    </div>
+</body>
+<script>
+    const StartAudio = new Audio('../src/rizz.mp3');
+    const body = document.querySelector('body');
+    body.addEventListener('mousemove', function(e) {
+        StartAudio.play();
+    });
+    window.onload = function() {
+        body.click();
+    }
+
+</script>
+</html>

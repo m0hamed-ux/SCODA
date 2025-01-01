@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCODA</title>
+    <link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+    <div class="absolute">
+        <pre>
+⣠⣤⣤⡤⠤⢤⣤⣀⡀⠀⠐⠒⡄⠀⡠⠒⠀⠀⢀⣀⣤⠤⠤⣤⣤⣤⡄
+⠈⠻⣿⡤⠤⡏⠀⠉⠙⠲⣄⠀⢰⢠⠃⢀⡤⠞⠋⠉⠈⢹⠤⢼⣿⠏⠀
+⠀⠀⠘⣿⡅⠓⢒⡤⠤⠀⡈⠱⣄⣼⡴⠋⡀⠀⠤⢤⡒⠓⢬⣿⠃⠀⠀
+⠀⠀⠀⠹⣿⣯⣐⢷⣀⣀⢤⡥⢾⣿⠷⢥⠤⣀⣀⣞⣢⣽⡿⠃⠀⠀⠀
+⠀⠀⠀⠀⠈⢙⣿⠝⠀⢁⠔⡨⡺⡿⡕⢔⠀⡈⠐⠹⣟⠋⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢼⣟⢦⢶⢅⠜⢰⠃⠀⢹⡌⢢⣸⠦⠴⣿⡇⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠘⣿⣇⡬⡌⢀⡟⠀⠀⠀⢷⠀⣧⢧⣵⣿⠂⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠈⢻⠛⠋⠉⠀⠀⠀⠀⠈⠉⠙⢻⡏⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢰⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠄⠀⠀⠀⠀⠀⠀
+        </pre>
+    </div>
+    <div class="noise"></div>
+    <div class="overlay"></div>
+    <div class="container" style="background-color: rgba(0, 0, 0, 0.381);  padding: 10px; border-radius: 10px">
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTRxOW80aDJycTZuY2lmZ2x0NGduNDBoaXM5enp6enR2cGNvNWhhdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qJzZ4APiDZQuJDY7vh/giphy.webp" alt="" style="width: 50%;">
+        <p>I'm so sad, but it's ok, i'm just a chill guy</p>
+    </div>
+</body>
+<script>
+    const StartAudio = new Audio('../src/chill.mp3');
+    const body = document.querySelector('body');
+    body.addEventListener('mousemove', function(e) {
+        StartAudio.play();
+    });
+    window.onload = function() {
+        body.click();
+    }
+
+</script>
+</html>

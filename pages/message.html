@@ -25,11 +25,12 @@
     <div class="container" style="background-color: rgba(0, 0, 0, 0.381);  padding: 10px; border-radius: 10px; max-width: 500px;">
         <p>Congratulations!</p>
         <p>2024 is over, so I just want to tell you how glad I am to have such an amazing person like you in my life. You’ve made this year so much better with your presence, and I’m truly grateful for all the moments we’ve shared. Here’s to more memories, laughter, and support in the year ahead. Thank you for being you.</p>
+        <h4>Let me know if you that you have read this message pls</h4>
         <p>I have an other special message just for you</p>
         <button class="submit show-message" style="margin: 0;">Open it</button>
 
     </div>
-    <div id="popup-success">
+    <div id="popup-success" style="padding: 20px;">
         <div class="noise"></div>
         <div class="overlay"></div>
         <div class="container" style="display: flex; justify-content: center; align-items: center; flex-direction: column; width: 100%; height:100%;">
@@ -42,8 +43,9 @@
                 <h1>Searching for your name in my friends list...</h1>
             </div>
             <div class="final-message" style="display: none;">
-                <img src="" alt="">
+                <img src="" alt="" style="width: 50%;">
                 <p></p>
+                <h1></h1>
                 <form action="" style="display: flex; justify-content: center; align-items: center; flex-direction: row;">
                     <input type="button" value="yes" class="submit yes" style="width: 100%; margin: 10px 0;">
                     <input type="button" value="no" class="submit no" style="width: 100%; margin: 10px 0;">
@@ -80,24 +82,40 @@
             const finalMessage = document.querySelector('.final-message');
             const img = finalMessage.querySelector('img');
             const p = finalMessage.querySelector('p');
+            const h1 = finalMessage.querySelector('h1');
             const yes = document.querySelector('.yes');
             const no = document.querySelector('.no');
             const tryAgain = document.querySelector('.try');
             searching.style.display = 'none';
             if (['Nour', 'nuur', 'nour', 'Nuur', 'NOUR', 'NUUR'].includes(name)) {
-                img.src = 'https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTl6NXVseWY4Y2V1dnExcWZtbGQyaXZncWg3eTdzbGJxcGtvczA4MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/AbY0Dz8Cc2Tjq/giphy.webp';
+                img.src = 'https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNm82Y283NXltbGMxaW9neGUzdDYxY2QwcjQxbzZhYTY1bTkzN2EyOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PSkcuZ35RSLl9Cltot/200w.webp';
                 p.textContent = 'Merry christmas is for christains, but for me I just wanna marry you';
+                h1.textContent = 'Would you marry me?';
                 StartAudio.pause();
                 StartAudio.currentTime = 0;
                 rizz.play();
                 finalMessage.style.display = 'block';
+                yes.addEventListener('click', function() {
+                    window.location.href = 'yes.html';
+                });
+                no.addEventListener('click', function() {
+                    window.location.href = 'no.html';
+                });
             } else {
-                img.src = 'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXZtcnp1bWtvZnlobmk1NXZsd2JjZzllYnNtdXJxZ3RldDJqa3IwaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fnuSiwXMTV3zmYDf6k/giphy.webp';
-                p.textContent = 'I did not find you! Who tf are you?';
-                finalMessage.style.display = 'block';
-                yes.style.display = 'none';
-                no.style.display = 'none';
-                tryAgain.style.display = 'block';
+                if (['Adam', 'adam', 'Bilal', 'bilal', 'lhsn', 'Lhsn', 'LHSN', 'Lahcen', 'lahcen', 'Ayoub', 'ayoub', 'AYOUB', 'ayoub', 'Amine', 'amine', 'AMINE', 'Amine', 'Yassine', 'yassine', 'YASSINE'].includes(name)) {
+                    img.src = 'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWh1ajh3N3I3eThzaW82bnU3bGttcWR6OWpqM2pua2xmZGFuOTF5OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/R6gvnAxj2ISzJdbA63/giphy.webp';
+                    p.textContent = 'Bro, You are my best friend, I am so glad to have you in my life';
+                    finalMessage.style.display = 'block';
+                    yes.style.display = 'none';
+                    no.style.display = 'none';
+                } else {
+                    img.src = 'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXZtcnp1bWtvZnlobmk1NXZsd2JjZzllYnNtdXJxZ3RldDJqa3IwaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fnuSiwXMTV3zmYDf6k/giphy.webp';
+                    p.textContent = 'I did not find you! Who tf are you?';
+                    finalMessage.style.display = 'block';
+                    yes.style.display = 'none';
+                    no.style.display = 'none';
+                    tryAgain.style.display = 'block';
+                }
             }
 
         }, 3000);
