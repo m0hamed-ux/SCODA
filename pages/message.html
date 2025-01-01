@@ -22,20 +22,86 @@
     </div>
     <div class="noise"></div>
     <div class="overlay"></div>
-    <div class="container" style="background-color: rgba(0, 0, 0, 0.381);  padding: 10px; border-radius: 10px;">
+    <div class="container" style="background-color: rgba(0, 0, 0, 0.381);  padding: 10px; border-radius: 10px; max-width: 500px;">
         <p>Congratulations!</p>
-        <p>You have successfully completed the challenge.</p>
+        <p>2024 is over, so I just want to tell you how glad I am to have such an amazing person like you in my life. You’ve made this year so much better with your presence, and I’m truly grateful for all the moments we’ve shared. Here’s to more memories, laughter, and support in the year ahead. Thank you for being you.</p>
+        <p>I have an other special message just for you</p>
+        <button class="submit show-message" style="margin: 0;">Open it</button>
 
+    </div>
+    <div id="popup-success">
+        <div class="noise"></div>
+        <div class="overlay"></div>
+        <div class="container" style="display: flex; justify-content: center; align-items: center; flex-direction: column; width: 100%; height:100%;">
+            <form action="" class="inputs form">
+                <h1>Write your name :</h1>
+                <input type="text" placeholder="Your name" style="width: 100%; margin: 10px 0;" class="name-input">
+                <input type="button" value="Submit" class="search submit" style="position: relative; cursor: pointer; z-index: 200;">
+            </form>
+            <div class="searching" style="display: none;">
+                <h1>Searching for your name in my friends list...</h1>
+            </div>
+            <div class="final-message" style="display: none;">
+                <img src="" alt="">
+                <p></p>
+                <form action="" style="display: flex; justify-content: center; align-items: center; flex-direction: row;">
+                    <input type="button" value="yes" class="submit yes" style="width: 100%; margin: 10px 0;">
+                    <input type="button" value="no" class="submit no" style="width: 100%; margin: 10px 0;">
+                    
+                </form>
+                <input type="button" value="try again" class="submit try" style="display: none; width: 100%; margin: 10px 0;" onclick="window.location.reload();">
+            </div>
+        </div>
     </div>
 </body>
 <script>
     const StartAudio = new Audio('../src/final.mp3');
+    const rizz = new Audio('../src/rizz.mp3');
     const body = document.querySelector('body');
     body.addEventListener('mousemove', function(e) {
         StartAudio.play();
     });
     // add a fonction that click on the body automatically when the page starts
     body.click();
+    const submit = document.querySelector('.show-message');
+    const search = document.querySelector('.search');
+    const popup = document.querySelector('#popup-success');
+    submit.addEventListener('click', function() {
+        popup.style.display = 'block';
+    });
+    search.addEventListener('click', function() {
+        const inputs = document.querySelectorAll('.name-input');
+        const name = inputs[0].value;
+        const searching = document.querySelector('.searching');
+        const form = document.querySelector('.form');
+        searching.style.display = 'block';
+        form.style.display = 'none';
+        setTimeout(() => {
+            const finalMessage = document.querySelector('.final-message');
+            const img = finalMessage.querySelector('img');
+            const p = finalMessage.querySelector('p');
+            const yes = document.querySelector('.yes');
+            const no = document.querySelector('.no');
+            const tryAgain = document.querySelector('.try');
+            searching.style.display = 'none';
+            if (['Nour', 'nuur', 'nour', 'Nuur', 'NOUR', 'NUUR'].includes(name)) {
+                img.src = 'https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTl6NXVseWY4Y2V1dnExcWZtbGQyaXZncWg3eTdzbGJxcGtvczA4MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/AbY0Dz8Cc2Tjq/giphy.webp';
+                p.textContent = 'Merry christmas is for christains, but for me I just wanna marry you';
+                StartAudio.pause();
+                StartAudio.currentTime = 0;
+                rizz.play();
+                finalMessage.style.display = 'block';
+            } else {
+                img.src = 'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXZtcnp1bWtvZnlobmk1NXZsd2JjZzllYnNtdXJxZ3RldDJqa3IwaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fnuSiwXMTV3zmYDf6k/giphy.webp';
+                p.textContent = 'I did not find you! Who tf are you?';
+                finalMessage.style.display = 'block';
+                yes.style.display = 'none';
+                no.style.display = 'none';
+                tryAgain.style.display = 'block';
+            }
 
+        }, 3000);
+    });
+        
 </script>
 </html>
